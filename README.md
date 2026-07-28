@@ -1,6 +1,6 @@
 # SATHWIK.EXE — Interactive Portfolio 🕹️
 
-A visually stunning, **video-game main-menu style** portfolio for **Sathwik H Naik** (Data Analyst / Data Scientist), built with a synthwave **pink → purple** aesthetic. Pure HTML / CSS / JavaScript — **no build step, no dependencies** — so it drops straight onto GitHub Pages.
+A visually stunning, **video-game main-menu style** portfolio for **Sathwik H Naik** (Data Scientist / Data Engineer / AI Engineer), built with a synthwave **pink → purple** aesthetic. Pure HTML / CSS / JavaScript — **no build step, no dependencies** — so it drops straight onto GitHub Pages.
 
 ## ✨ Features
 
@@ -15,10 +15,9 @@ A visually stunning, **video-game main-menu style** portfolio for **Sathwik H Na
 
 All content lives in **`data.js`** — edit that one file:
 
-- `PROFILE` — name, email, phone, and **your real LinkedIn & GitHub URLs** (placeholders are in there now).
-- `SKILLS`, `EXPERIENCE`, `PROJECTS`, `EDUCATION`, `CERTS`, `TOOLBELT`, `ABOUT`.
+- `PROFILE`, `SKILLS`, `EXPERIENCE`, `PROJECTS`, `EDUCATION`, `CERTS`, `TOOLBELT`, `ABOUT`.
 
-The résumé PDF is `Sathwik_Naik_Resume.pdf` (linked from the Multiplayer/contact screen — replace it to update the download).
+The résumé PDF is `Sathwik_Naik_Data_Scientist_Resume.pdf` (linked from the Multiplayer/contact screen via `PROFILE.resume`).
 
 ## 🚀 Host it on GitHub Pages
 

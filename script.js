@@ -257,11 +257,14 @@
         const card = el("div", "level");
         card.style.animationDelay = i * 80 + "ms";
         const tags = p.tags.map((t) => `<span class="chip">${esc(t)}</span>`).join("");
+        const gh = p.github
+          ? `<a class="level-gh" href="${esc(p.github)}" target="_blank" rel="noopener">GitHub ↗</a>`
+          : "";
         card.innerHTML = `
           <div class="level-top"><span class="level-no">LV ${String(i + 1).padStart(2, "0")}</span><span class="level-date">${esc(p.date)}</span></div>
           <h4>${esc(p.title)}</h4>
           <p>${p.desc}</p>
-          <div class="chips level-tags">${tags}</div>`;
+          <div class="chips level-tags">${tags}${gh}</div>`;
         grid.appendChild(card);
       });
       return grid;
@@ -300,7 +303,7 @@
       panelTag.textContent = "MODE // MULTIPLAYER";
       panelTitle.textContent = "CONNECT WITH PLAYER 01";
       const wrap = el("div");
-      wrap.appendChild(el("p", "lede", `Open to <b>data analyst / data scientist</b> roles. Let's team up — pick a channel below.`));
+      wrap.appendChild(el("p", "lede", `Open to <b>data scientist, data engineer, data analyst, analytics engineer, and AI/ML engineer</b> roles. Let's team up — pick a channel below.`));
       const grid = el("div", "contacts");
       grid.style.marginTop = "20px";
       const cards = [
