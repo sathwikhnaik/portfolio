@@ -89,8 +89,6 @@ button { font: inherit; }
 .button:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--cyan) 52%, var(--line)); }
 .button--primary { color: #041016; background: linear-gradient(135deg, #a5f2ff, #80dff4); box-shadow: 0 12px 40px rgba(61, 200, 228, .18); }
 .button--ghost { background: var(--glass); backdrop-filter: blur(16px); }
-.hero-foot { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; color: var(--faint); text-transform: uppercase; font-family: var(--font-mono); font-size: 9px; letter-spacing: .14em; }
-.hero-foot__line { width: 84px; height: 1px; background: linear-gradient(90deg, var(--line-strong), transparent); }
 
 .evidence { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: -62px; position: relative; z-index: 5; }
 .evidence-card { min-height: 154px; border-radius: var(--radius-md); padding: 25px; display: flex; flex-direction: column; justify-content: flex-end; }

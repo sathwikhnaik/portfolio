@@ -28,7 +28,6 @@ export default function Home() {
               </div>
             </Reveal>
           </div>
-          <div className="hero-foot" aria-hidden="true"><span>Scroll to inspect</span><span className="hero-foot__line" /></div>
         </section>
 
         <section className="evidence section-shell" aria-label="Career highlights">
@@ -85,7 +84,7 @@ export default function Home() {
 
         <section className="content-section section-shell" id="projects" aria-labelledby="projects-title">
           <Reveal className="section-heading">
-            <div><p className="section-index">04 / Selected systems</p><h2 id="projects-title">Eight projects.<br />Equal proof.</h2></div>
+            <div><p className="section-index">04 / Project portfolio</p><h2 id="projects-title">Data systems.<br />Applied intelligence.</h2></div>
             <p>Every project is a complete technical story with a constraint, an architecture, and a measured result.</p>
           </Reveal>
           <div className="projects-grid">
