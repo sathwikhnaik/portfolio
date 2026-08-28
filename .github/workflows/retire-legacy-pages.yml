@@ -1,0 +1,41 @@
+name: Retire legacy GitHub Pages overlap
+
+on:
+  schedule:
+    - cron: "45 1 4 9 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  redirect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check retirement window
+        id: window
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" || "$(date -u +%F)" == "2026-09-04" ]]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check out main
+        if: steps.window.outputs.run == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Replace the legacy site with the Vercel redirect
+        if: steps.window.outputs.run == 'true'
+        shell: bash
+        run: |
+          cp .github/legacy-pages-redirect.html index.html
+          git rm -f -- .nojekyll data.js script.js styles.css
+          git add index.html
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Retire legacy GitHub Pages overlap"
+          git push origin HEAD:main
