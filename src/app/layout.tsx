@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: profile.summary,
   applicationName: `${profile.name} Portfolio`,
   authors: [{ name: profile.name, url: profile.linkedin }],
+  icons: { icon: "/icon.svg", shortcut: "/icon.svg", apple: "/icon.svg" },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

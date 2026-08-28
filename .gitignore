@@ -10,6 +10,7 @@
 /playwright-report
 /test-results
 /output
+/.playwright-cli
 
 # deployment
 .vercel
@@ -25,5 +26,3 @@ Sathwik_Naik_Master_Resume.pdf
 COMPLETE_PROJECT_PORTFOLIO.pdf
 Master_Resume_Tailoring_Instructions_v13.md
 debug.log
-
-.vercel
